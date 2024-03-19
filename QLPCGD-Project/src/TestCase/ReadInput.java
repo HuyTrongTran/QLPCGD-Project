@@ -1,4 +1,4 @@
-package QLPCGD;
+package TestCase;
 
 import java.io.File;
 import java.io.FileInputStream;

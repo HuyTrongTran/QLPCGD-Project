@@ -1,4 +1,4 @@
-package QLPCGD;
+package TestCase;
 
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
