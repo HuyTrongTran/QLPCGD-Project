@@ -1,4 +1,4 @@
-package TestCase;
+package Auth_Script;
 
 import java.io.File;
 import java.io.FileInputStream;
