@@ -15,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 public class ImportTimeTable extends LoginComponent{
@@ -87,5 +88,9 @@ public class ImportTimeTable extends LoginComponent{
 	  WebDriverWait wait = new WebDriverWait(driver, 60);
 	  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[6]/button[1]")));
 	  driver.findElement(By.xpath("/html/body/div[3]/div/div[6]/button[1]")).click();
+  }
+  @AfterTest
+  public void AfterTest() {
+	  driver.quit();
   }
 }
