@@ -17,9 +17,7 @@ public class AssignInstructors extends LoginComponent{
 	 } 
 
 	@Test (priority = 0) 
-
 	public void TC01_phancong() throws InterruptedException { 
-
 		driver.findElement(By.linkText("Thời khoá biểu")).click(); 
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
 		driver.findElement(By.linkText("Phân công")).click();

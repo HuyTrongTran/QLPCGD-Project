@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-19T13:45:19 ICT" name="Default suite" finished-at="2024-03-19T13:46:38 ICT" duration-ms="79542">
+  <suite started-at="2024-03-27T01:35:23 ICT" name="Default suite" finished-at="2024-03-27T01:35:57 ICT" duration-ms="34451">
     <groups>
     </groups>
-    <test started-at="2024-03-19T13:45:19 ICT" name="Default test" finished-at="2024-03-19T13:46:38 ICT" duration-ms="79542">
-      <class name="QLPCGD.DeleteClass">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:QLPCGD.DeleteClass@350aac89]" started-at="2024-03-19T13:45:19 ICT" name="beforeTest" finished-at="2024-03-19T13:46:15 ICT" duration-ms="56027" status="PASS">
+    <test started-at="2024-03-27T01:35:23 ICT" name="Default test" finished-at="2024-03-27T01:35:57 ICT" duration-ms="34451">
+      <class name="Timetable_Script.ImportTimeTable">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Timetable_Script.ImportTimeTable@712625fd]" started-at="2024-03-27T01:35:23 ICT" name="beforeTest" finished-at="2024-03-27T01:35:29 ICT" duration-ms="6609" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="deleteClass()[pri:0, instance:QLPCGD.DeleteClass@350aac89]" started-at="2024-03-19T13:46:15 ICT" name="deleteClass" finished-at="2024-03-19T13:46:38 ICT" duration-ms="23490" status="PASS">
+        <test-method signature="importTimeTable()[pri:0, instance:Timetable_Script.ImportTimeTable@712625fd]" started-at="2024-03-27T01:35:29 ICT" name="importTimeTable" finished-at="2024-03-27T01:35:57 ICT" duration-ms="27824" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteClass -->
-      </class> <!-- QLPCGD.DeleteClass -->
+        </test-method> <!-- importTimeTable -->
+      </class> <!-- Timetable_Script.ImportTimeTable -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

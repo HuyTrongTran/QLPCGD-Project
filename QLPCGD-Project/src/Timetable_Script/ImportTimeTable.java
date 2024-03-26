@@ -9,9 +9,12 @@ import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.BeforeTest;
 
 public class ImportTimeTable extends LoginComponent{
@@ -66,26 +69,23 @@ public class ImportTimeTable extends LoginComponent{
 	  Thread.sleep(4000);
 	  
 	  driver.findElement(By.xpath("/html/body/div[2]/div[2]/div[3]/div/section/div[1]/div/div/div[2]/form/div[3]/button")).click();
-	  Thread.sleep(1000);
+	  Thread.sleep(2000);
 	  
-	  WebElement alreadyValue = driver.findElement(By.xpath("//*[@id=\"swal2-html-container\"]"));
+	  WebElement alreadyValue = driver.findElement(By.xpath("//*[@id=\"swal2-html-container\"]")); 
 	  
-	  if(alreadyValue.getText() == "Học kỳ và ngành này đã có dữ liệu trong hệ thống, bạn muốn cập nhật hay thay thế thời khoá biểu?") {
+	  if(alreadyValue.isEnabled()) {
 		 driver.findElement(By.xpath("/html/body/div[3]/div/div[6]/button[1]")).click();
 		 Thread.sleep(1000);
 		 
-//		 WebElement conImpAlert = driver.findElement(By.xpath("//*[@id=\"swal2-html-container\"]"));
-//		 if(conImpAlert.getText() == "Có một số lớp có sinh viên đăng ký là 0, bạn có muốn import tiếp không?"){
-//			 WebElement continueImportBtn = driver.findElement(By.xpath("/html/body/div[3]/div/div[6]/button[1]"));
-//			 continueImportBtn.click();
-//			 driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-//			 WebElement confirmAlert = driver.findElement(By.xpath("//*[@id=\"swal2-html-container\"]"));
-//			 if(confirmAlert.getText() == "Đã import dữ liệu! Có một số giảng viên chưa có trong hệ thống, vui lòng xem chi tiết ở cuối trang.") {
-//				 WebElement confirmImport = driver.findElement(By.xpath("/html/body/div[3]/div/div[6]/button[1]"));
-//				 confirmImport.click();
-//			 }
-//		 }
+		 WebElement conImpAlert = driver.findElement(By.xpath("//*[@id=\"swal2-html-container\"]"));
+		 if(conImpAlert.isEnabled()){
+			 WebElement continueImportBtn = driver.findElement(By.xpath("/html/body/div[3]/div/div[6]/button[1]"));
+			 continueImportBtn.click();
+//			 driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS); 
+		 }
 	  }
+	  WebDriverWait wait = new WebDriverWait(driver, 60);
+	  wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[3]/div/div[6]/button[1]")));
+	  driver.findElement(By.xpath("/html/body/div[3]/div/div[6]/button[1]")).click();
   }
-  
 }
